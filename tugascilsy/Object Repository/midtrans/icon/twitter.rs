@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>twitter</name>
+   <tag></tag>
+   <elementGuidId>6bb96de8-aaed-4f56-b023-5a7e9d8db5b6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//img[@src='/assets/img/tweet.svg?v=1642129329']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//img[@src='/assets/img/tweet.svg?v=1642129329']</value>
+   </webElementProperties>
+</WebElementEntity>

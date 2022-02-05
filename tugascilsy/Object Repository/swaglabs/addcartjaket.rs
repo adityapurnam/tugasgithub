@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>addcartjaket</name>
+   <tag></tag>
+   <elementGuidId>82d2ed3d-ba52-48fd-a9eb-78ffb76931d8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@id='add-to-cart-sauce-labs-fleece-jacket']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//button[@id='add-to-cart-sauce-labs-fleece-jacket']</value>
+   </webElementProperties>
+</WebElementEntity>

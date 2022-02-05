@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>sharetwitter</name>
+   <tag></tag>
+   <elementGuidId>8ffce30d-79d9-48ec-92f2-2988a9917006</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//img[@src='/assets/img/twitt.svg?v=1642129329']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//img[@src='/assets/img/twitt.svg?v=1642129329']</value>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>doublklik</name>
+   <tag></tag>
+   <elementGuidId>768966b4-f4f5-4d1a-92df-eb06d18b225c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class='demo-content']/div[1]//div[@class='rtOut']/div[contains(.,'Zanzibar')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//div[@class='demo-content']/div[1]//div[@class='rtOut']/div[contains(.,'Zanzibar')]</value>
+   </webElementProperties>
+</WebElementEntity>
