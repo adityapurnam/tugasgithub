@@ -1,0 +1,944 @@
+{
+	"info": {
+		"_postman_id": "771bf768-2e72-433d-b8b3-d9b19a1be007",
+		"name": "BIGProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Group Chat",
+			"item": [
+				{
+					"name": "Chat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"verify name\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.fullname).to.eql(\"Aditya Purnama\");\r",
+									"};\r",
+									"\r",
+									"pm.test(\"verify email\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.email).to.eql(\"aditya.purnama07@gmail.com\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\": \"<p>pagi</p>\", \"mentionedUsers\": []}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/group-chats/61fd1d0e835d698459fc4841/messages",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"group-chats",
+								"61fd1d0e835d698459fc4841",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Direct Chat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"verify name\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.fullname).to.eql(\"Aditya Purnama\");\r",
+									"};\r",
+									"\r",
+									"pm.test(\"verify email\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.email).to.eql(\"aditya.purnama07@gmail.com\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\":\"<p>muantaappp</p>\",\"mentionedUsers\":[]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/chats/62562104baa88777901ad513/messages",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"chats",
+								"62562104baa88777901ad513",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attch in chat jpg",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Upload attachments is success\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ADITYA/Desktop/lebah.jpg"
+								},
+								{
+									"key": "file",
+									"value": "",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/group-chats/61fd1d0e835d698459fc4841/attachments",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"group-chats",
+								"61fd1d0e835d698459fc4841",
+								"attachments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete chat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"verify name\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.fullname).to.eql(\"Aditya Purnama\");\r",
+									"};\r",
+									"\r",
+									"pm.test(\"verify email\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.email).to.eql(\"aditya.purnama07@gmail.com\");\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Delete group chat message success\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/group-chats/61fd1d0e835d698459fc4841/messages/6256753f7ffef4674c1f7928",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"group-chats",
+								"61fd1d0e835d698459fc4841",
+								"messages",
+								"6256753f7ffef4674c1f7928"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6203be9ade9abb312845d922",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag member",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Create message successful\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\":\"<p><span class=\\\"fr-deletable fr-tribute\\\" contenteditable=\\\"false\\\" data-mentioned-user-id=\\\"624da7a1b4dad6e159120742\\\" id=\\\"mentioned-user\\\" style=\\\"padding:1px; background-color:#e8ffff; border-radius:2px; display:inline-flex; align-items:center\\\"><img style=\\\"width:20px; height:20px; object-fit: cover; margin-right:3px; border-radius:100%;\\\" src=\\\"https://lh3.googleusercontent.com/a/AATXAJzQUsfh8I8Hdj5uWU45f3kgopg7vc5DoRAZYZ0=s96-c\\\"><a href=\\\"/profiles/624da7a1b4dad6e159120742\\\">ahmad zaky</a></span>&nbsp;</p>\",\"mentionedUsers\":[\"624da7a1b4dad6e159120742\"]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/group-chats/61fd1d0e835d698459fc4841/messages",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"group-chats",
+								"61fd1d0e835d698459fc4841",
+								"messages"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6203be9ade9abb312845d922",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blast",
+			"item": [
+				{
+					"name": "Create blast",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Create post successful\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"pohon\",\"content\":\"<p>mangga</p>\",\"subscribers\":[\"603359f77a297efcc3cd0a0b\",\"61fd235584646e338f5e5d39\",\"5f863ff43a36b417e2f0f165\",\"6200fa91bc73a030d87995d6\",\"620d0eb7edc86bfc2cc8c816\",\"624bfa0f0c4983012c1a4874\",\"62039a6a5e31f31cd89b4aad\",\"624be87193e3e2c127f0ba3a\",\"61fd2447835d697c62fc49e2\",\"5f8648613a36b417e2f0f168\",\"62500cc21ac866195232f2bf\",\"624da7a1b4dad6e159120742\",\"6203be9ade9abb312845d922\"],\"mentionedUsers\":[],\"dueDate\":null,\"isPublic\":true,\"autoComplete\":{\"status\":true,\"date\":\"2022-04-14T01:56:05.307Z\"}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/blasts/61fd1d0e835d69f0ecfc4843/posts",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blasts",
+								"61fd1d0e835d69f0ecfc4843",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit blast",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Update post successful\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"hewan\",\"content\":\"<p>babi</p>\",\"subscribers\":[\"603359f77a297efcc3cd0a0b\",\"61fd235584646e338f5e5d39\",\"5f863ff43a36b417e2f0f165\",\"6200fa91bc73a030d87995d6\",\"620d0eb7edc86bfc2cc8c816\",\"624bfa0f0c4983012c1a4874\",\"62039a6a5e31f31cd89b4aad\",\"624be87193e3e2c127f0ba3a\",\"61fd2447835d697c62fc49e2\",\"5f8648613a36b417e2f0f168\",\"62500cc21ac866195232f2bf\",\"624da7a1b4dad6e159120742\",\"6203be9ade9abb312845d922\"],\"mentionedUsers\":[],\"dueDate\":null,\"isNotified.dueOneDay\":false,\"isNotified.dueOneHour\":false,\"isPublic\":true,\"autoComplete\":{\"status\":true,\"date\":\"2022-04-14T01:58:56.271Z\"},\"complete\":{\"status\":false}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/posts/6256318c81dcf2724dba455a?id=6256327281dcf2724dba46cc",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"6256318c81dcf2724dba455a"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6256327281dcf2724dba46cc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Archived blast",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Archive Post successful\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/posts/6253a637e1a7f431a530275e/archived",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"6253a637e1a7f431a530275e",
+								"archived"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Board",
+			"item": [
+				{
+					"name": "Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Create comment is success\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\":\"<p>mantap betul</p>\",\"mentionedUsers\":[],\"type\":\"card\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/cards/6253381a96738a0c6438a2e3/comments",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"6253381a96738a0c6438a2e3",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"Update comment is success\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\":\"<p>lah iya</p>\",\"mentionedUsers\":[],\"type\":\"card\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/cards/6253381a96738a0c6438a2e3/comments/625371d9e6338feaef08ef0e",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"6253381a96738a0c6438a2e3",
+								"comments",
+								"625371d9e6338feaef08ef0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drag And Drop",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"selector\":{\"boardId\":\"61fd1d0e835d695fb0fc483f\"},\"data\":{\"draggableId\":\"6253381a96738a0c6438a2e3\",\"type\":\"card\",\"source\":{\"index\":1,\"droppableId\":\"62004be49c66eb29cc1ae472\"},\"reason\":\"DROP\",\"mode\":\"FLUID\",\"destination\":{\"droppableId\":\"61fed562f80febabbe1419b0\",\"index\":0},\"combine\":null}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/cards/position",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle label",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"toggle label card is success\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/cards/6253381a96738a0c6438a2e3/labels/62532fb7e6338f3dfe08a62b",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"6253381a96738a0c6438a2e3",
+								"labels",
+								"62532fb7e6338f3dfe08a62b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle card",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify succes\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.success).to.eql(\"toggle label card is success\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/cards/6253381a96738a0c6438a2e3/members/6203be9ade9abb312845d922",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"6253381a96738a0c6438a2e3",
+								"members",
+								"6203be9ade9abb312845d922"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notif komentar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/v2/posts/625679077ffef4674c1f7d45/comments?limit=10",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"v2",
+								"posts",
+								"625679077ffef4674c1f7d45",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle member",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code\"), function () {\r",
+									"    pm.response.to.have.status(OK);\r",
+									"};\r",
+									"\r",
+									"pm.test(\"Verify currentTeams\"),  function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data).to.eql(\"currentTeam\");\r",
+									"};"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55Ijp7Il9pZCI6IjYxZmQxYmNhODM1ZDY5MWNlNmZjNDcwZCJ9LCJfaWQiOiI2MjAzYmU5YWRlOWFiYjMxMjg0NWQ5MjIiLCJnb29nbGVJZCI6IjEwMzIyOTM1NDIzNTYxODMxMzc4OSIsImVtYWlsIjoiYWRpdHlhLnB1cm5hbWEwN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFkaXR5YSBQdXJuYW1hIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHanJMQjktS2p3OHZkcm5DaTZNMjFQZy12MWludmJ3YTY2bm5kX0U9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTA5VDEzOjE2OjEwLjgwOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTA1VDA3OjEzOjM4LjI5M1oiLCJfX3YiOjB9LCJpYXQiOjE2NDk0OTAwMzIsImV4cCI6MTY1MjA4MjAzMn0.LNLGaY5fZeP8vF9OJaSXqB-5otw6mgDSoSQ7tvkMMrE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stagingapi.cicle.app/api/v1/teams/61fd1d0e835d69dfaafc483c/members/6203be9ade9abb312845d922",
+							"protocol": "https",
+							"host": [
+								"stagingapi",
+								"cicle",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"teams",
+								"61fd1d0e835d69dfaafc483c",
+								"members",
+								"6203be9ade9abb312845d922"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
