@@ -1,12 +1,0 @@
-
-@
-java:S3010"#Remove this assignment of "driver".(ÁÜÑ¥8—ö†Şø/
-R
-java:S2209"5Change this instance-reference to a static reference.(ÁÜÑ¥8™ö†Şø/
-U	java:S106&"9Replace this use of System.out or System.err by a logger.(›æŒÁ8›ö†Şø/
-x
-java:S2159'"VRemove this call to "equals"; comparisons between unrelated types always return false.(µ×”ıÿÿÿÿ8œö†Şø/
-U	java:S1060"9Replace this use of System.out or System.err by a logger.(à•ÒÁ8ö†Şø/
-G
-java:S1068"*Remove this unused "driver" private field.(ëÇ×8Ÿö†Şø/
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(™ÊÎ8 ö†Şø/
